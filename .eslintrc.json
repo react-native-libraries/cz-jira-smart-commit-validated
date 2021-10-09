@@ -1,0 +1,42 @@
+{
+    "env": {
+        "node": true,
+        "es2021": true
+    },
+    "extends": ["prettier", "eslint:recommended", "plugin:node/recommended"],
+    // "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    // "plugins": ["react", "react-native"],
+    "rules": {
+        // allow .js files to contain JSX code
+        // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+
+        // Allow 130 characteres by line
+        "max-len": ["error", 130],
+
+        // Indent with 4 spaces
+        "indent": ["off", 4],
+
+        "no-console": "off",
+
+        "prefer-destructuring": "warn",
+
+        "function-paren-newline": "off",
+
+        "array-callback-return": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".ts", ".tsx", ".native.js"],
+                "moduleDirectory": ["node_modules", "src/"]
+            }
+        }
+    }
+}

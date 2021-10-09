@@ -1,0 +1,96 @@
+{
+    "name": "cz-jira-smart-validated",
+    "version": "1.0.0",
+    "description": "A commitzen adapter for Jira smart commit with custom validations",
+    "main": "index.js",
+    "engines": {
+        "node": ">=8.10.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint .",
+        "nibble": "eslint-nibble ../app_motorista/",
+        "prettier:check": "prettier --config .prettierrc --check \"application/**/*.{js}\"",
+        "prepare": "husky install",
+        "commitmsg": "validate-commit-msg"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/react-native-libraries/cz-jira-smart-validated.git"
+    },
+    "keywords": [
+        "jira",
+        "jira-smart",
+        "commitzen",
+        "jira-smart-validated",
+        "commit",
+        "commit-standardization"
+    ],
+    "author": "Kalebe Samuel",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/react-native-libraries/cz-jira-smart-validated/issues"
+    },
+    "homepage": "https://github.com/react-native-libraries/cz-jira-smart-validated#readme",
+    "dependencies": {
+        "chalk": "^2.4.1",
+        "commitizen": "^4.0.3",
+        "conventional-commit-types": "^3.0.0",
+        "lodash.map": "^4.5.1",
+        "longest": "^2.0.1",
+        "word-wrap": "^1.0.3"
+    },
+    "devDependencies": {
+        "@babel/core": "7.9.6",
+        "@babel/eslint-parser": "^7.15.8",
+        "@typescript-eslint/eslint-plugin": "^4.32.0",
+        "@typescript-eslint/parser": "^4.32.0",
+        "commitizen": "^4.2.4",
+        "cosmiconfig": "^5.2.1",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-nibble": "^7.0.0",
+        "eslint-plugin-import": "^2.24.2",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-node": "^11.1.0",
+        "husky": "^7.0.0",
+        "lint-staged": "7.0.5",
+        "prettier": "2.4.1",
+        "semantic-release": "^15.13.3",
+        "semver": "^6.2.0",
+        "validate-commit-msg": "^2.14.0",
+        "rxjs-compat": "^6.6.7"
+    },
+    "optionalDependencies": {
+        "@commitlint/load": ">6.1.1"
+    },
+    "lint-staged": {
+        "**/*.{js, jsx, ts, tsx}": [
+            "yarn eslint",
+            "yarn prettier --write"
+        ]
+    },
+    "config": {
+        "validate-commit-msg": {
+            "types": [
+                "feat",
+                "fix",
+                "docs",
+                "style",
+                "refactor",
+                "perf",
+                "test",
+                "chore",
+                "revert"
+            ],
+            "warnOnFail": false,
+            "maxSubjectLength": 100,
+            "subjectPattern": "^[A-Z]+-[0-9]+ - .*",
+            "subjectPatternErrorMsg": "Subject must be in format 'JIR-123 - Commit message'",
+            "helpMessage": "I'm a Help message"
+        },
+        "commitizen": {
+            "path": "./index.js"
+        }
+    }
+}
