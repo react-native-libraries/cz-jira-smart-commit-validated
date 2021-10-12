@@ -83,6 +83,7 @@
                 "chore",
                 "revert"
             ],
+            "defaultIssues": true,
             "warnOnFail": false,
             "maxSubjectLength": 100,
             "subjectPattern": "^[A-Z]+-[0-9]+ - .*",
@@ -90,7 +91,41 @@
             "helpMessage": "I'm a Help message"
         },
         "commitizen": {
-            "path": "./index.js"
+            "path": "./index.js",
+            "disableScopeLowerCase": false,
+            "disableSubjectLowerCase": false,
+            "maxHeaderWidth": 100,
+            "maxLineWidth": 100,
+            "defaultType": "",
+            "defaultScope": "",
+            "defaultSubject": "",
+            "defaultBody": "",
+            "defaultIssues": "",
+            "defaultIssuesPrefix": "EVOLOG",
+            "enableMultiIssuesIdByCommit": false,
+            "defaultWorkflowOption": "quality",
+            "workflowOptions": {
+                "backlog": {
+                    "description": "Move jira task to backlog",
+                    "title": "Backlog"
+                },
+                "test": {
+                    "description": "Move jira task to test",
+                    "title": "Testing"
+                },
+                "quality": {
+                    "description": "Move jira task to quality",
+                    "title": "Quality"
+                },
+                "keyuser": {
+                    "description": "Move jira task to keyUser",
+                    "title": "KeyUser"
+                },
+                "complete": {
+                    "description": "Move jira task to complete",
+                    "title": "Move jira task to completed"
+                }
+            }
         }
     }
 }
