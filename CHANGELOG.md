@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-* **package.json:** if something doesn't exist, it can still be created ([fda20cd](https://github.com/react-native-libraries/cz-jira-smart-validated/commit/fda20cd0b200e9db225812aec2977e0bd227b469))
+* **package.json:** if something doesn't exist, it can still be created ([6019dbd](https://github.com/react-native-libraries/cz-jira-smart-validated/commit/6019dbd3953ff2f7fde5e43ed7eca30d5aaf847e))
 
 
 ### Features
