@@ -1,6 +1,11 @@
 # 1.0.0 (2021-11-02)
 
 
+### Bug Fixes
+
+* **package.json:** if something doesn't exist, it can still be created ([fda20cd](https://github.com/react-native-libraries/cz-jira-smart-validated/commit/fda20cd0b200e9db225812aec2977e0bd227b469))
+
+
 ### Features
 
 * **add update-changelog script:** Add script to package.json ([49ea3da](https://github.com/react-native-libraries/cz-jira-smart-validated/commit/49ea3da6228dec72959046ad29f71159c0cf7e66))
