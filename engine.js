@@ -134,6 +134,19 @@ var checkSubjectLength = function (subject, options, maxAnswerLength) {
 };
 
 //= ==============================================================================================
+var handleWorkflowOptions = (workflowOptions) => {
+    // let parsed = JSON.parse(workflowOptions);
+    const nothing = {
+        description: 'Does nothing',
+        title: 'Nothing',
+    };
+
+    let options = { nothing, ...workflowOptions };
+
+    return options;
+};
+
+//= ==============================================================================================
 var prepareChoices = (types, length) => {
     let choices = map(types, (type, key) => {
         return {
@@ -151,14 +164,15 @@ module.exports = function (options) {
     var subjectLength = 0;
     var maxAnswerLength = 0;
     var branchName;
+    var newWorkFlowOptions = handleWorkflowOptions(workflowOptions);
 
     exec('git symbolic-ref --short HEAD').then((res) => (branchName = res));
 
     var typeChangeLength = longest(Object.keys(types)).length + 1;
     var typeChangeChoices = prepareChoices(types, typeChangeLength);
 
-    var typeWorkflowLength = longest(Object.keys(workflowOptions)).length + 1;
-    var typeWorkflowChoices = prepareChoices(workflowOptions, typeWorkflowLength);
+    var typeWorkflowLength = longest(Object.keys(newWorkFlowOptions)).length + 1;
+    var typeWorkflowChoices = prepareChoices(newWorkFlowOptions, typeWorkflowLength);
 
     return {
         // When a user runs `git cz`, prompter will
@@ -251,7 +265,6 @@ module.exports = function (options) {
                     name: 'workflow',
                     message: 'Select the workflow command (optional):',
                     choices: typeWorkflowChoices,
-                    default: options.defaultWorkflowOption,
                 },
                 {
                     type: 'input',
@@ -284,7 +297,10 @@ module.exports = function (options) {
                 // Wrap these lines at options.maxLineWidth characters
                 var body = answers.body ? wrap(answers.body, wrapOptions) : false;
 
-                var workflow = answers.workflow ? ' #' + answers.workflow : '';
+                var workflow =
+                    answers.workflow && answers.workflow !== 'nothing'
+                        ? ' #' + answers.workflow
+                        : '';
                 var time = answers.time ? ' #time ' + answers.time : '';
                 var comment = answers.comment ? ' #comment ' + answers.comment : '';
 
