@@ -4,6 +4,7 @@ var engine = require('./engine');
 var conventionalCommitTypes = require('conventional-commit-types');
 var { configLoader } = require('commitizen');
 var config = configLoader.load() || {};
+var defaultWorkflowOptions = require('./workflowOptions.json');
 
 //= ==============================================================================================
 var options = {
@@ -12,11 +13,10 @@ var options = {
     defaultScope: process.env.CZ_SCOPE || config.defaultScope,
     defaultSubject: process.env.CZ_SUBJECT || config.defaultSubject,
     defaultBody: process.env.CZ_BODY || config.defaultBody,
-    defaultIssues: process.env.CZ_ISSUES || config.defaultIssues,
     defaultIssuesPrefix: process.env.CZ_ISSUES_PREFIX || config.defaultIssuesPrefix,
     enableMultiIssuesIdByCommit:
         process.env.CZ_ENABLE_MULTI_ISSUES_ID_BY_COMMIT || config.enableMultiIssuesIdByCommit,
-    workflowOptions: process.env.CZ_WORKFLOW_OPTIONS || config.workflowOptions,
+    workflowOptions: config.workflowOptions || defaultWorkflowOptions.workflowOptions,
     disableScopeLowerCase: process.env.DISABLE_SCOPE_LOWERCASE || config.disableScopeLowerCase,
     disableSubjectLowerCase:
         process.env.DISABLE_SUBJECT_LOWERCASE || config.disableSubjectLowerCase,
