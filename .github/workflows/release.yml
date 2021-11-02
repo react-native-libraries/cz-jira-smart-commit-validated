@@ -20,4 +20,4 @@ jobs:
             - run: npx semantic-release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  NPM_TOKEN: ${{ secrets.CZ_JIRA_SMART_COMMIT_VALIDATE_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
