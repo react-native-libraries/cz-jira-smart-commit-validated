@@ -15,7 +15,7 @@
 * **package.json .eslintrc.json .husky .eslintignore:** first Commit ([f400587](https://github.com/react-native-libraries/cz-jira-smart-commit-validated/commit/f400587c2e81fa4043a4e80d7e8d14749a05497c))
 * **package.json:** Add flag to ignore hooks ([8c9519c](https://github.com/react-native-libraries/cz-jira-smart-commit-validated/commit/8c9519cee85884ec356696cd6cf4e6b21a9a6f37))
 * **package.json:** add semantic-release package ([862bf6c](https://github.com/react-native-libraries/cz-jira-smart-commit-validated/commit/862bf6c037c6cc2cee42c1bc78d3c669dd70abbf))
-* **release.yml:** added release.yml to run project's release workflow ([e1fc1f3](https://github.com/react-native-libraries/cz-jira-smart-commit-validated/commit/e1fc1f3aa5499a86da27f3d76ff803a4a061fae0))
+* **release.yml:** added release.yml to run project's release workflow ([4513834](https://github.com/react-native-libraries/cz-jira-smart-commit-validated/commit/45138340d970a103d0164b63b18d80693033e884))
 
 
 
