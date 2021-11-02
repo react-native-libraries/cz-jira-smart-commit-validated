@@ -1,8 +1,8 @@
 ![npm (scoped)](https://img.shields.io/npm/v/@react_native_libraries/react-native-network-state-listener) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) ![npm](https://img.shields.io/npm/dw/@react_native_libraries/react-native-network-state-listener)
 
-# cz-jira-smart-validated
+# cz-jira-smart-commit-validated
 
-[](https://raw.githubusercontent.com/react-native-libraries/cz-jira-smart-validated/main/images/banner.jpeg)
+[](https://raw.githubusercontent.com/react-native-libraries/cz-jira-smart-commit-validated/main/images/banner.jpeg)
 
 ## About
 
@@ -25,23 +25,23 @@ This adapter was based on [cz-jira-smart-commit](https://github.com/commitizen/c
 ## Example
 
 **Flow sample:**
-![sampleFlow](https://raw.githubusercontent.com/react-native-libraries/cz-jira-smart-validated/main/images/commitExample.jpeg)
+![sampleFlow](https://raw.githubusercontent.com/react-native-libraries/cz-jira-smart-commit-validated/main/images/commitExample.jpeg)
 
 **Sample of the result of mounting the commit using this adapter:**
-![sampleFlow](https://raw.githubusercontent.com/react-native-libraries/cz-jira-smart-validated/main/images/expectedResult.jpeg)
+![sampleFlow](https://raw.githubusercontent.com/react-native-libraries/cz-jira-smart-commit-validated/main/images/expectedResult.jpeg)
 
 ## Installation
 
 **If using yarn:**
 
 ```javascript
-yarn add cz-jira-smart-validated
+yarn add cz-jira-smart-commit-validated
 ```
 
 **If using npm:**
 
 ```javascript
-npm i cz-jira-smart-validated
+npm i cz-jira-smart-commit-validated
 ```
 
 ## Usage
@@ -102,7 +102,7 @@ The commitzen will be triggered via the husky using cz-jira-smart-commit-validat
 
 ## Documentation
 
-### cz-jira-smart-validated
+### cz-jira-smart-commit-validated
 
 | Property Name               | Environment Variable Name           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Default                                                                                                   |
 | --------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |

@@ -1,5 +1,5 @@
 {
-    "name": "cz-jira-smart-validated",
+    "name": "cz-jira-smart-commit-validated",
     "version": "0.0.0-development",
     "description": "A commitzen adapter for Jira smart commit with validations",
     "main": "index.js",
@@ -17,7 +17,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/react-native-libraries/cz-jira-smart-validated.git"
+        "url": "git+https://github.com/react-native-libraries/cz-jira-smart-commit-validated.git"
     },
     "keywords": [
         "jira",
@@ -31,9 +31,9 @@
     "author": "Kalebe Samuel",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/react-native-libraries/cz-jira-smart-validated/issues"
+        "url": "https://github.com/react-native-libraries/cz-jira-smart-commit-validated/issues"
     },
-    "homepage": "https://github.com/react-native-libraries/cz-jira-smart-validated#readme",
+    "homepage": "https://github.com/react-native-libraries/cz-jira-smart-commit-validated#readme",
     "dependencies": {
         "chalk": "^2.4.1",
         "commitizen": "^4.0.3",
