@@ -1,6 +1,6 @@
 {
     "name": "cz-jira-smart-validated",
-    "version": "1.0.0",
+    "version": "0.0.0-development",
     "description": "A commitzen adapter for Jira smart commit with validations",
     "main": "index.js",
     "engines": {
@@ -57,10 +57,10 @@
         "husky": "^7.0.0",
         "lint-staged": "7.0.5",
         "prettier": "2.4.1",
-        "semantic-release": "^15.13.3",
+        "rxjs-compat": "^6.6.7",
+        "semantic-release": "^18.0.0",
         "semver": "^6.2.0",
-        "validate-commit-msg": "^2.14.0",
-        "rxjs-compat": "^6.6.7"
+        "validate-commit-msg": "^2.14.0"
     },
     "optionalDependencies": {
         "@commitlint/load": ">6.1.1"

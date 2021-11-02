@@ -1,4 +1,4 @@
-# 1.0.0 (2021-11-02)
+# 0.0.0-development (2021-11-02)
 
 
 ### Bug Fixes
@@ -14,6 +14,7 @@
 * **index.js:** add new options ([62f764e](https://github.com/react-native-libraries/cz-jira-smart-validated/commit/62f764ef186cd7718bcec5c163f9c9407335979a))
 * **package.json .eslintrc.json .husky .eslintignore:** first Commit ([f400587](https://github.com/react-native-libraries/cz-jira-smart-validated/commit/f400587c2e81fa4043a4e80d7e8d14749a05497c))
 * **package.json:** Add flag to ignore hooks ([8c9519c](https://github.com/react-native-libraries/cz-jira-smart-validated/commit/8c9519cee85884ec356696cd6cf4e6b21a9a6f37))
+* **package.json:** add semantic-release package ([10ded24](https://github.com/react-native-libraries/cz-jira-smart-validated/commit/10ded241a9955587151c78b0ce10b087fa216bab))
 
 
 
