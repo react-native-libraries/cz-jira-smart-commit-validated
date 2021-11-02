@@ -1,7 +1,7 @@
 {
     "name": "cz-jira-smart-validated",
     "version": "1.0.0",
-    "description": "A commitzen adapter for Jira smart commit with custom validations",
+    "description": "A commitzen adapter for Jira smart commit with validations",
     "main": "index.js",
     "engines": {
         "node": ">=8.10.0"
@@ -25,7 +25,8 @@
         "commitzen",
         "jira-smart-validated",
         "commit",
-        "commit-standardization"
+        "commit-standardization",
+        "validate"
     ],
     "author": "Kalebe Samuel",
     "license": "MIT",
@@ -100,32 +101,8 @@
             "defaultScope": "",
             "defaultSubject": "",
             "defaultBody": "",
-            "defaultIssues": "",
             "defaultIssuesPrefix": "EVOLOG",
-            "enableMultiIssuesIdByCommit": false,
-            "defaultWorkflowOption": "quality",
-            "workflowOptions": {
-                "backlog": {
-                    "description": "Move jira task to backlog",
-                    "title": "Backlog"
-                },
-                "test": {
-                    "description": "Move jira task to test",
-                    "title": "Testing"
-                },
-                "quality": {
-                    "description": "Move jira task to quality",
-                    "title": "Quality"
-                },
-                "keyuser": {
-                    "description": "Move jira task to keyUser",
-                    "title": "KeyUser"
-                },
-                "complete": {
-                    "description": "Move jira task to complete",
-                    "title": "Move jira task to completed"
-                }
-            }
+            "enableMultiIssuesIdByCommit": false
         }
     }
 }
