@@ -135,7 +135,6 @@ var checkSubjectLength = function (subject, options, maxAnswerLength) {
 
 //= ==============================================================================================
 var handleWorkflowOptions = (workflowOptions) => {
-    // let parsed = JSON.parse(workflowOptions);
     const nothing = {
         description: 'Does nothing',
         title: 'Nothing',
@@ -279,6 +278,35 @@ module.exports = function (options) {
                     name: 'comment',
                     message: 'Jira comment (optional):\n',
                 },
+                {
+                    type: 'confirm',
+                    name: 'isBreaking',
+                    message: 'Are there any breaking changes?',
+                    default: false,
+                },
+                {
+                    type: 'input',
+                    name: 'breakingBody',
+                    default: '-',
+                    message:
+                        'A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself:\n',
+                    when: function (answers) {
+                        return answers.isBreaking && !answers.body;
+                    },
+                    validate: function (breakingBody) {
+                        return (
+                            breakingBody.trim().length > 0 || 'Body is required for BREAKING CHANGE'
+                        );
+                    },
+                },
+                {
+                    type: 'input',
+                    name: 'breaking',
+                    message: 'Describe the breaking changes:\n',
+                    when: function (answers) {
+                        return answers.isBreaking;
+                    },
+                },
             ]).then(function (answers) {
                 var wrapOptions = {
                     trim: true,
@@ -301,12 +329,21 @@ module.exports = function (options) {
                     answers.workflow && answers.workflow !== 'nothing'
                         ? ' #' + answers.workflow
                         : '';
+
                 var time = answers.time ? ' #time ' + answers.time : '';
+
                 var comment = answers.comment ? ' #comment ' + answers.comment : '';
 
                 var jira = '\n' + answers.issues + workflow + time + comment;
 
-                commit(filter([head, body, jira]).join('\n\n'));
+                // Apply breaking change prefix, removing it if already present
+                var breaking = answers.breaking ? answers.breaking.trim() : '';
+                breaking = breaking
+                    ? 'BREAKING CHANGE: ' + breaking.replace(/^BREAKING CHANGE: /, '')
+                    : '';
+                breaking = breaking ? wrap(breaking, wrapOptions) : false;
+
+                commit(filter([head, body, jira, breaking]).join('\n\n'));
             });
         },
     };
