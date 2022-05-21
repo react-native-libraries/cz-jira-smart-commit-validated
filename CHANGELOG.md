@@ -1,6 +1,5 @@
 # 0.0.0-development (2022-05-21)
 
-
 ### Bug Fixes
 
 * **package.json:** if something doesn't exist, it can still be created ([6019dbd](https://github.com/react-native-libraries/cz-jira-smart-commit-validated/commit/6019dbd3953ff2f7fde5e43ed7eca30d5aaf847e))
